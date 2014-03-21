@@ -1,0 +1,2 @@
+recursive-include aoki *
+global-exclude *pyc

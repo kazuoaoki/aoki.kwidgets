@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="aoki.kwidgets">
+
+ <object name="kwidgets"
+    meta_type="Filesystem Directory View"
+    directory="aoki.kwidgets:skins/kwidgets" />
+
+</object -->
+
+<object name="portal_skins">
+
+    <object name="aoki.kwidgets"
+        meta_type="Filesystem Directory View"
+        directory="aoki.kwidgets:skins/kwidgets" />
+    
+    <skin-path name="*">
+        <layer name="aoki.kwidgets" insert-after="custom" />
+    </skin-path>
+    
+</object>

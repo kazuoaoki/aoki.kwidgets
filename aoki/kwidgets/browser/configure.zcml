@@ -1,0 +1,31 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="aoki.kwidgets">
+
+  <include package="plone.app.contentmenu" />
+
+  <!-- -*- extra stuff goes here -*- -->
+  <browser:page
+        for="*"
+        class=".view.Slider" 
+        name="slider"
+        permission="zope2.View"
+        template="templates/kslider.pt"
+    />
+    
+  <browser:page
+        for="*"
+        class=".view.Teste" 
+        name="teste_request"
+        permission="zope2.View"
+        attribute="teste"
+    />
+
+    <browser:view
+        name="render-kslider-js"
+        for="Products.Archetypes.interfaces.IBaseObject"
+        class=".view.CreateSlider"
+        permission="zope.Public"
+    />
+</configure>

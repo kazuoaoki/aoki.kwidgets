@@ -18,6 +18,8 @@ valor dado um intervalo fornecido:
         
     -Exemplos de uso:
     
+    from aoki.kwidgets.widgets import SliderWidget
+    
     #basico
     atapi.IntegerField(
         name='evolucao',

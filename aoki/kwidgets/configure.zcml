@@ -29,5 +29,5 @@
         directory="skins/kwidgets"
         permission="zope.Public"
         />
-
+        
 </configure>

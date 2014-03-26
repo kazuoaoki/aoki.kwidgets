@@ -18,7 +18,6 @@
              name=""
              value=""
              size="30"
-             readonly="readonly"
              tal:attributes="name fieldName;
              id fieldName;
              value value;
@@ -26,20 +25,11 @@
              placeholder widget/placeholder|nothing;
              maxlength widget/maxlength|nothing;"
              />
-  
-         <metal:legend metal:fill-slot="widget-control">
-           <div tal:define="ksliderlegends nocall:here/@@render-kslider-scales;"
-                tal:replace="structure python:ksliderlegends(field)">xpto</div>
-         </metal:legend>
-         
-         <metal:kwidget-slider metal:fill-slot="widget_slider">
-           <div tal:attributes="id string:kwidget-slider-${fieldName}" />
-           <script tal:define="ksliderjs nocall:here/@@render-kslider-js;
-                               slider-div string:kwidget-slider-${fieldName}"
+         <metal:kwidget-spinner metal:fill-slot="widget_slider">
+           <script tal:define="ksliderjs nocall:here/@@render-kspinner-js"
                    tal:replace="structure python:ksliderjs(field)">
            </script>
-         </metal:kwidget-slider>
-
+         </metal:kwidget-spinner>
       </metal:use>
 
     </metal:define>

@@ -6,26 +6,26 @@
   <include package="plone.app.contentmenu" />
 
   <!-- -*- extra stuff goes here -*- -->
-  <browser:page
-        for="*"
-        class=".view.Slider" 
-        name="slider"
-        permission="zope2.View"
-        template="templates/kslider.pt"
-    />
-    
-  <browser:page
-        for="*"
-        class=".view.Teste" 
-        name="teste_request"
-        permission="zope2.View"
-        attribute="teste"
-    />
 
+    
     <browser:view
         name="render-kslider-js"
         for="Products.Archetypes.interfaces.IBaseObject"
         class=".view.CreateSlider"
+        permission="zope.Public"
+    />
+    
+    <browser:view
+        name="render-kslider-scales"
+        for="Products.Archetypes.interfaces.IBaseObject"
+        class=".view.CreateSliderScales"
+        permission="zope.Public"
+    />
+    
+    <browser:view
+        name="render-kspinner-js"
+        for="Products.Archetypes.interfaces.IBaseObject"
+        class=".view.CreateSpinner"
         permission="zope.Public"
     />
 </configure>
